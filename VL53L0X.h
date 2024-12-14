@@ -1,9 +1,11 @@
 #ifndef VL53L0X_h
 #define VL53L0X_h
-
-#include <Arduino.h>
-#include <Wire.h>
-
+#ifdef ARDUINO
+  #include <Arduino.h>
+  #include <Wire.h>
+#else
+  #include <VL53L0X_port.h>
+#endif
 class VL53L0X
 {
   public:

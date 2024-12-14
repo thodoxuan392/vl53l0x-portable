@@ -4,7 +4,9 @@
 // VL53L0X datasheet.
 
 #include "VL53L0X.h"
-#include <Wire.h>
+#ifdef ARDUINO
+    #include <Wire.h>
+#endif
 
 // Defines /////////////////////////////////////////////////////////////////////
 
