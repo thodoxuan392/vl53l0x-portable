@@ -15,19 +15,9 @@
 #include <stdint.h>
 #include <stdbool.h>
 #include <hal/clock.h>
+#include <Wire.h>
 
 #define boolean bool
 #define millis() CLOCK_getTick()
-
-typedef struct
-{
-	void (*beginTransmission)(uint8_t address);
-	void (*write)(uint8_t data);
-	void (*requestFrom)(uint8_t address, uint8_t data_size);
-	uint8_t (*read)(void);
-	uint8_t (*endTransmission)(void);
-} TwoWire;
-
-extern TwoWire Wire;
 
 #endif // VL53L0X_PORT_H
